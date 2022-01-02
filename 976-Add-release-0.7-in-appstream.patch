@@ -1,0 +1,24 @@
+From 1092f654f8711c816a6b42c26a0be44b14f63007 Mon Sep 17 00:00:00 2001
+From: TheEvilSkeleton <theevilskeleton@riseup.net>
+Date: Fri, 31 Dec 2021 23:26:16 -0500
+Subject: [PATCH] Add release 0.7
+
+---
+ qt/org.openrgb.OpenRGB.metainfo.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/qt/org.openrgb.OpenRGB.metainfo.xml b/qt/org.openrgb.OpenRGB.metainfo.xml
+index ba512c63a..a51ddbdfc 100644
+--- a/qt/org.openrgb.OpenRGB.metainfo.xml
++++ b/qt/org.openrgb.OpenRGB.metainfo.xml
+@@ -49,6 +49,7 @@
+   </description>
+ 
+   <releases>
++    <release version="0.7" date="2021-12-30"></release>
+     <release version="0.6" date="2021-06-01"></release>
+     <release version="0.5" date="2021-12-07"></release>
+     <release version="0.4" date="2020-09-09"></release>
+-- 
+GitLab
+

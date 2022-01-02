@@ -48,3 +48,7 @@ modules:
       - type: archive
         url: https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/release_0.7/OpenRGB-release_0.7.tar.gz
         sha256: 6052e04ad736f94a91a386f6cfc0aaff9554fafdabe99cdd46a296fd49132569
+      # Add release 0.7 in appstream
+      # https://gitlab.com/CalcProgrammer1/OpenRGB/-/commit/ea00ca89770b2143ccae05183da3b1b5f0e36710
+      - type: patch
+        path: 976-Add-release-0.7-in-appstream.patch
