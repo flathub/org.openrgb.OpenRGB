@@ -8,6 +8,8 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
+  # Tray Icon
+  - --talk-name=org.kde.StatusNotifierWatcher
 rename-desktop-file: OpenRGB.desktop
 rename-icon: OpenRGB
 
