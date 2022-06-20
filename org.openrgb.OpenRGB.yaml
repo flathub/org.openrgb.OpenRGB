@@ -6,6 +6,7 @@ command: openrgb
 finish-args:
   - --device=all
   - --share=ipc
+  - --share=network
   - --socket=wayland
   - --socket=fallback-x11
   # Tray Icon
