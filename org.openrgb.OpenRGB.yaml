@@ -55,3 +55,8 @@ modules:
       # https://gitlab.com/CalcProgrammer1/OpenRGB/-/commit/ea00ca89770b2143ccae05183da3b1b5f0e36710
       - type: patch
         path: 976-Add-release-0.7-in-appstream.patch
+      # Crash on loading JSON due to LTO (Link Time Optimizations)
+      # https://gitlab.com/CalcProgrammer1/OpenRGB/-/issues/1654
+      # 59732ed47e6c1392ba5236c07410dca13d4d721f
+      - type: patch
+        path: 59732ed47e6c1392ba5236c07410dca13d4d721f.patch
