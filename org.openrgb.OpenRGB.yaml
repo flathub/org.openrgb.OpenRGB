@@ -17,7 +17,7 @@ rename-icon: OpenRGB
 modules:
   - shared-modules/libusb/libusb.json
 
-  - name: libhdapi
+  - name: libhidapi
     buildsystem: cmake-ninja
     sources:
       - type: git
