@@ -55,4 +55,4 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/CalcProgrammer1/OpenRGB.git
-        commit: dbad6ce90d8ff80d6fcc05a0d8d0458e0cc591f5
+        commit: 972f9001bd96ea5090eaa08639fa4527a3c31a21
