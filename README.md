@@ -14,3 +14,18 @@ To ensure you have device permissions please install the latest UDEV rules.
   - Then reload rules with `sudo udevadm control --reload-rules && sudo udevadm trigger`
 
 See: https://gitlab.com/CalcProgrammer1/OpenRGB#installing-udev-rules-manually.
+
+## OpenRGB Pipeline (Experimental)
+
+You can install latest experimental builds available in `flathub-beta`:
+
+```bash
+$ flatpak remote-add --user flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+$ flatpak install --user flathub-beta org.openrgb.OpenRGB
+```
+
+To run:
+
+```
+$ flatpak run org.openrgb.OpenRGB//beta
+```
