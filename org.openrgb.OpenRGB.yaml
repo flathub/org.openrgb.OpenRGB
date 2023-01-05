@@ -1,7 +1,7 @@
 id: org.openrgb.OpenRGB
 sdk: org.kde.Sdk
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: 5.15-22.08
 command: openrgb
 finish-args:
   - --device=all
@@ -22,8 +22,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libusb/hidapi.git
-        tag: hidapi-0.12.0
-        commit: 76108294092c023a4ece99eb3219559cea0d5066
+        tag: hidapi-0.13.0
+        commit: c3a6150d8801f79a59034045275176e9738b13e4
         x-checker-data:
           type: json
           url: https://api.github.com/repos/libusb/hidapi/releases/latest
