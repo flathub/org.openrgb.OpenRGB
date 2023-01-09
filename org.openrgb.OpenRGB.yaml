@@ -22,8 +22,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libusb/hidapi.git
-        tag: hidapi-0.13.0
-        commit: c3a6150d8801f79a59034045275176e9738b13e4
+        tag: hidapi-0.13.1
+        commit: 4ebce6b5059b086d05ca7e091ce04a5fd08ac3ac
         x-checker-data:
           type: json
           url: https://api.github.com/repos/libusb/hidapi/releases/latest
