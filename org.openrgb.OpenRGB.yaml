@@ -14,6 +14,13 @@ finish-args:
 rename-desktop-file: OpenRGB.desktop
 rename-icon: OpenRGB
 
+cleanup:
+  - "*.a"
+  - "*.la"
+  - /*/include
+  - /*/pkgconfig
+  - /include
+
 modules:
   - shared-modules/libusb/libusb.json
 
