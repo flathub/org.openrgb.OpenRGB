@@ -1,0 +1,37 @@
+From ad9e50c9d3c8a5e95009e1363615e08dd25ec995 Mon Sep 17 00:00:00 2001
+From: Adam Honse <calcprogrammer1@gmail.com>
+Date: Fri, 20 Oct 2023 16:37:43 -0500
+Subject: [PATCH] Fix metainfo links
+
+---
+ qt/org.openrgb.OpenRGB.metainfo.xml | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/qt/org.openrgb.OpenRGB.metainfo.xml b/qt/org.openrgb.OpenRGB.metainfo.xml
+index 910f2fe20f..61605e426b 100644
+--- a/qt/org.openrgb.OpenRGB.metainfo.xml
++++ b/qt/org.openrgb.OpenRGB.metainfo.xml
+@@ -63,7 +63,7 @@
+ 
+   <screenshots>
+     <screenshot type="default">
+-      <image>https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/uploads/e1d8d4603ecdd04f1acbcf6b2314fc66/OpenRGB_0.31_Device_View.PNG</image>
++      <image>https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/raw/stable/uploads/e1d8d4603ecdd04f1acbcf6b2314fc66/OpenRGB_0.31_Device_View.PNG</image>
+     </screenshot>
+   </screenshots>
+ 
+@@ -74,8 +74,8 @@
+ 
+   <url type="bugtracker">https://gitlab.com/CalcProgrammer1/OpenRGB/-/issues</url>
+   <url type="contact">https://discord.gg/AQwjJPY</url>
+-  <url type="donation">https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/home#support-openrgb</url>
+-  <url type="faq">https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/Frequently-Asked-Questions</url>
+-  <url type="help">https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/home</url>
++  <url type="donation">https://gitlab.com/CalcProgrammer1/OpenRGB/-/blob/master/README.md#support-openrgb</url>
++  <url type="faq">https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/User-Documentation/Frequently-Asked-Questions.md</url>
++  <url type="help">https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/home.md</url>
+   <url type="homepage">https://openrgb.org</url>
+ </component>
+-- 
+GitLab
+
