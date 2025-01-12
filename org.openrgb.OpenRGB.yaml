@@ -1,7 +1,7 @@
 id: org.openrgb.OpenRGB
 sdk: org.kde.Sdk
 runtime: org.kde.Platform
-runtime-version: 5.15-23.08
+runtime-version: 5.15-24.08
 command: openrgb
 finish-args:
   - --device=all
@@ -32,10 +32,8 @@ modules:
         tag: hidapi-0.14.0
         commit: d3013f0af3f4029d82872c1a9487ea461a56dee4
         x-checker-data:
-          type: json
-          url: https://api.github.com/repos/libusb/hidapi/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
+          type: git
+          tag-pattern: hidapi-([\d.]+)
 
   - name: mbedtls
     buildsystem: cmake-ninja
@@ -52,18 +50,25 @@ modules:
     sources:
       - type: git
         url: https://github.com/ARMmbed/mbedtls.git
-        tag: v2.28.1
-        commit: dd79db10014d85b26d11fe57218431f2e5ede6f2
+        tag: v3.6.2
+        commit: 107ea89daaefb9867ea9121002fbbdf926780e98
+        x-checker-data:
+          type: git
+          tag-pattern: v([\d.]+)
 
   - name: openrgb
     buildsystem: qmake
     config-opts:
       - QMAKE_LIBS+=-L/app/lib
     sources:
-      - type: archive
-        url: https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/release_0.9/OpenRGB-release_0.9.tar.gz
-        sha256: 2e62799339b72b6d3afc4792e6ff39487583210bb5ddde93e2daa38ae35381c2
+      - type: git
+        url: https://gitlab.com/CalcProgrammer1/OpenRGB.git
+        tag: release_0.9
+        commit: b5f46e3f1de03595656c682fc2f068b66e735e63
+        x-checker-data:
+          type: git
+          tag-pattern: release_([\d.]+)
       - type: patch
-        path: 'patches/Fix metainfo links.patch'
+        path: patches/Fix metainfo links.patch
       - type: patch
         path: patches/More_AppData_fixes.patch
