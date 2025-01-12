@@ -37,14 +37,14 @@ modules:
 
   - name: mbedtls
     buildsystem: cmake-ninja
-    builddir: true
+    #builddir: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
       - -DENABLE_PROGRAMS=OFF
       - -DENABLE_TESTING=OFF
-      - -DUSE_SHARED_MBEDTLS_LIBRARY=ON
-      - -DUSE_STATIC_MBEDTLS_LIBRARY=OFF
+      # - -DUSE_SHARED_MBEDTLS_LIBRARY=ON
+      # - -DUSE_STATIC_MBEDTLS_LIBRARY=OFF
     cleanup:
       - /include
     sources:
