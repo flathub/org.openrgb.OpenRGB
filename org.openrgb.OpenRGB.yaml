@@ -37,24 +37,20 @@ modules:
 
   - name: mbedtls
     buildsystem: cmake-ninja
-    #builddir: true
+    builddir: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
       - -DENABLE_PROGRAMS=OFF
       - -DENABLE_TESTING=OFF
-      # - -DUSE_SHARED_MBEDTLS_LIBRARY=ON
-      # - -DUSE_STATIC_MBEDTLS_LIBRARY=OFF
+      - -DUSE_SHARED_MBEDTLS_LIBRARY=ON
+      - -DUSE_STATIC_MBEDTLS_LIBRARY=OFF
     cleanup:
       - /include
     sources:
-      - type: git
-        url: https://github.com/ARMmbed/mbedtls.git
-        tag: v3.6.2
-        commit: 107ea89daaefb9867ea9121002fbbdf926780e98
-        x-checker-data:
-          type: git
-          tag-pattern: v([\d.]+)
+      - type: archive
+        url: https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.2/mbedtls-3.6.2.tar.bz2
+        sha256: 8b54fb9bcf4d5a7078028e0520acddefb7900b3e66fec7f7175bb5b7d85ccdca
 
   - name: openrgb
     buildsystem: qmake
