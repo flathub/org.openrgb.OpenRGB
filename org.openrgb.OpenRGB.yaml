@@ -1,7 +1,7 @@
 id: org.openrgb.OpenRGB
 sdk: org.kde.Sdk
 runtime: org.kde.Platform
-runtime-version: 5.15-24.08
+runtime-version: 5.15-23.08
 command: openrgb
 finish-args:
   - --device=all
@@ -48,9 +48,13 @@ modules:
     cleanup:
       - /include
     sources:
-      - type: archive
-        url: https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.2/mbedtls-3.6.2.tar.bz2
-        sha256: 8b54fb9bcf4d5a7078028e0520acddefb7900b3e66fec7f7175bb5b7d85ccdca
+      - type: git
+        url: https://github.com/Mbed-TLS/mbedtls.git
+        tag: v3.6.2
+        commit: 107ea89daaefb9867ea9121002fbbdf926780e98
+        x-checker-data:
+          type: git
+          tag-pattern: v([\d.]+)        
 
   - name: openrgb
     buildsystem: qmake
