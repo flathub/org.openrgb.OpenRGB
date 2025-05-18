@@ -15,8 +15,8 @@ rename-desktop-file: OpenRGB.desktop
 rename-icon: OpenRGB
 
 cleanup:
-  - "*.a"
-  - "*.la"
+  - '*.a'
+  - '*.la'
   - /*/include
   - /*/pkgconfig
   - /include
@@ -29,8 +29,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libusb/hidapi.git
-        tag: hidapi-0.14.0
-        commit: d3013f0af3f4029d82872c1a9487ea461a56dee4
+        tag: hidapi-0.15.0
+        commit: d6b2a974608dec3b76fb1e36c189f22b9cf3650c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/libusb/hidapi/releases/latest
@@ -64,6 +64,6 @@ modules:
         url: https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/release_0.9/OpenRGB-release_0.9.tar.gz
         sha256: 2e62799339b72b6d3afc4792e6ff39487583210bb5ddde93e2daa38ae35381c2
       - type: patch
-        path: 'patches/Fix metainfo links.patch'
+        path: patches/Fix metainfo links.patch
       - type: patch
         path: patches/More_AppData_fixes.patch
