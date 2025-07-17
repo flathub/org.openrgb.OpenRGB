@@ -1,7 +1,7 @@
 id: org.openrgb.OpenRGB
 sdk: org.kde.Sdk
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: 5.15-24.08
 command: openrgb
 finish-args:
   - --device=all
@@ -11,8 +11,13 @@ finish-args:
   - --socket=fallback-x11
   # Tray Icon
   - --talk-name=org.kde.StatusNotifierWatcher
-rename-desktop-file: OpenRGB.desktop
-rename-icon: OpenRGB
+
+cleanup:
+  - '*.a'
+  - '*.la'
+  - /*/include
+  - /*/pkgconfig
+  - /include
 
 modules:
   - shared-modules/libusb/libusb.json
@@ -22,8 +27,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libusb/hidapi.git
-        tag: hidapi-0.12.0
-        commit: 76108294092c023a4ece99eb3219559cea0d5066
+        tag: hidapi-0.15.0
+        commit: d6b2a974608dec3b76fb1e36c189f22b9cf3650c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/libusb/hidapi/releases/latest
@@ -44,9 +49,9 @@ modules:
       - /include
     sources:
       - type: git
-        url: https://github.com/ARMmbed/mbedtls.git
-        tag: v2.28.1
-        commit: dd79db10014d85b26d11fe57218431f2e5ede6f2
+        url: https://github.com/Mbed-TLS/mbedtls
+        tag: v3.2.1
+        commit: 869298bffeea13b205343361b7a7daf2b210e33d
 
   - name: openrgb
     buildsystem: qmake
@@ -54,5 +59,8 @@ modules:
       - QMAKE_LIBS+=-L/app/lib
     sources:
       - type: git
-        url: https://gitlab.com/CalcProgrammer1/OpenRGB.git
-        commit: 972f9001bd96ea5090eaa08639fa4527a3c31a21
+        url: https://gitlab.com/CalcProgrammer1/OpenRGB
+        tag: release_candidate_1.0rc1
+        commit: 1fbacdea373361ecd2e0780c1db15cc3eb9aa538
+      - type: patch
+        path: patches/More_AppData_fixes.patch

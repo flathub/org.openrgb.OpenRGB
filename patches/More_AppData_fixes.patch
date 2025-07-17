@@ -1,0 +1,10 @@
+--- a/qt/org.openrgb.OpenRGB.metainfo.xml	2024-04-28 23:44:33.883361874 +0300
++++ b/qt/org.openrgb.OpenRGB.metainfo.xml	2024-04-28 23:45:37.624110644 +0300
+@@ -64,6 +63,7 @@
+   <screenshots>
+     <screenshot type="default">
+       <image>https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/raw/stable/uploads/e1d8d4603ecdd04f1acbcf6b2314fc66/OpenRGB_0.31_Device_View.PNG</image>
++      <caption>Device View</caption>
+     </screenshot>
+   </screenshots>
+ 
