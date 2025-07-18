@@ -1,26 +1,42 @@
-From ad9e50c9d3c8a5e95009e1363615e08dd25ec995 Mon Sep 17 00:00:00 2001
-From: Adam Honse <calcprogrammer1@gmail.com>
-Date: Fri, 20 Oct 2023 16:37:43 -0500
-Subject: [PATCH] Fix metainfo links
-
----
- qt/org.openrgb.OpenRGB.metainfo.xml | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
-diff --git a/qt/org.openrgb.OpenRGB.metainfo.xml b/qt/org.openrgb.OpenRGB.metainfo.xml
-index 910f2fe20f..61605e426b 100644
 --- a/qt/org.openrgb.OpenRGB.metainfo.xml
 +++ b/qt/org.openrgb.OpenRGB.metainfo.xml
-@@ -63,7 +63,7 @@
+@@ -5,20 +5,18 @@
+   <launchable type="desktop-id">OpenRGB.desktop</launchable>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-2.0-or-later</project_license>
+-  <developer_name>OpenRGB Developers and Contributors</developer_name>
++  <developer id="org.openrgb">
++    <name>Adam Honse, OpenRGB Team</name>
++  </developer>
+ 
+   <name>OpenRGB</name>
+   <provides>
+     <binary>openrgb</binary>
+   </provides>
+ 
+-  <content_rating type="oars-1.0">
+-  </content_rating>
++  <content_rating type="oars-1.0" />
+ 
+-  <summary>
+-    Open source RGB lighting control that doesn't depend on manufacturer
+-    software.
+-  </summary>
++  <summary>Open source RGB lighting control that doesn't depend on manufacturer software</summary>
+ 
+   <description>
+     <p>
+@@ -63,7 +61,8 @@
  
    <screenshots>
      <screenshot type="default">
 -      <image>https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/uploads/e1d8d4603ecdd04f1acbcf6b2314fc66/OpenRGB_0.31_Device_View.PNG</image>
-+      <image>https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/raw/stable/uploads/e1d8d4603ecdd04f1acbcf6b2314fc66/OpenRGB_0.31_Device_View.PNG</image>
++      <image>https://gitlab.com/CalcProgrammer1/OpenRGB/-/raw/master/Documentation/Images/OpenRGB_Screenshot.png</image>
++      <caption>OpenRGB Device View</caption>
      </screenshot>
    </screenshots>
  
-@@ -74,8 +74,8 @@
+@@ -74,8 +73,8 @@
  
    <url type="bugtracker">https://gitlab.com/CalcProgrammer1/OpenRGB/-/issues</url>
    <url type="contact">https://discord.gg/AQwjJPY</url>
@@ -32,6 +48,3 @@ index 910f2fe20f..61605e426b 100644
 +  <url type="help">https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/home.md</url>
    <url type="homepage">https://openrgb.org</url>
  </component>
--- 
-GitLab
-
