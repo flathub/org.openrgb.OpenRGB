@@ -22,8 +22,6 @@ cleanup:
   - /include
 
 modules:
-  - shared-modules/libusb/libusb.json
-
   - name: libhidapi
     buildsystem: cmake-ninja
     sources:
