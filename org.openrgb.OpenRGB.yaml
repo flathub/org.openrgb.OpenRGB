@@ -1,7 +1,7 @@
 id: org.openrgb.OpenRGB
 sdk: org.kde.Sdk
 runtime: org.kde.Platform
-runtime-version: 5.15-24.08
+runtime-version: 5.15-25.08
 command: openrgb
 finish-args:
   - --device=all
@@ -20,8 +20,6 @@ cleanup:
   - /include
 
 modules:
-  - shared-modules/libusb/libusb.json
-
   - name: libhidapi
     buildsystem: cmake-ninja
     sources:
@@ -49,9 +47,14 @@ modules:
       - /include
     sources:
       - type: git
-        url: https://github.com/Mbed-TLS/mbedtls
-        tag: v3.2.1
-        commit: 869298bffeea13b205343361b7a7daf2b210e33d
+        url: https://github.com/ARMmbed/mbedtls.git
+        tag: v3.6.5
+        commit: e185d7fd85499c8ce5ca2a54f5cf8fe7dbe3f8df
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+          versions:
+            <: v4.0
 
   - name: openrgb
     buildsystem: qmake
