@@ -63,7 +63,5 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/CalcProgrammer1/OpenRGB
-        tag: release_candidate_1.0rc1
-        commit: 1fbacdea373361ecd2e0780c1db15cc3eb9aa538
-      - type: patch
-        path: patches/More_AppData_fixes.patch
+        tag: release_candidate_1.0rc2
+        commit: 0fca93e4544f943d4d7ec8073dba4e47c18ef54b
