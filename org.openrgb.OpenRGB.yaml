@@ -65,3 +65,5 @@ modules:
         url: https://gitlab.com/CalcProgrammer1/OpenRGB
         tag: release_candidate_1.0rc2
         commit: 0fca93e4544f943d4d7ec8073dba4e47c18ef54b
+      - type: patch
+        path: patches/metainfo.patch
