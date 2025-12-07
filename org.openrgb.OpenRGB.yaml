@@ -11,8 +11,6 @@ finish-args:
   - --socket=fallback-x11
   # Tray Icon
   - --talk-name=org.kde.StatusNotifierWatcher
-rename-desktop-file: OpenRGB.desktop
-rename-icon: OpenRGB
 
 cleanup:
   - '*.a'
@@ -63,8 +61,9 @@ modules:
     config-opts:
       - QMAKE_LIBS+=-L/app/lib
     sources:
-      - type: archive
-        url: https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/release_0.9/OpenRGB-release_0.9.tar.gz
-        sha256: 2e62799339b72b6d3afc4792e6ff39487583210bb5ddde93e2daa38ae35381c2
+      - type: git
+        url: https://gitlab.com/CalcProgrammer1/OpenRGB
+        tag: release_candidate_1.0rc2
+        commit: 0fca93e4544f943d4d7ec8073dba4e47c18ef54b
       - type: patch
         path: patches/metainfo.patch

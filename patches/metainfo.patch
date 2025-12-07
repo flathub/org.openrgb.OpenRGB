@@ -1,50 +1,13 @@
+diff --git a/qt/org.openrgb.OpenRGB.metainfo.xml b/qt/org.openrgb.OpenRGB.metainfo.xml
+index 65dc783e..dad33dc2 100644
 --- a/qt/org.openrgb.OpenRGB.metainfo.xml
 +++ b/qt/org.openrgb.OpenRGB.metainfo.xml
-@@ -5,20 +5,18 @@
-   <launchable type="desktop-id">OpenRGB.desktop</launchable>
-   <metadata_license>CC0-1.0</metadata_license>
-   <project_license>GPL-2.0-or-later</project_license>
--  <developer_name>OpenRGB Developers and Contributors</developer_name>
-+  <developer id="org.openrgb">
-+    <name>Adam Honse, OpenRGB Team</name>
-+  </developer>
+@@ -48,6 +48,8 @@
+   </description>
  
-   <name>OpenRGB</name>
-   <provides>
-     <binary>openrgb</binary>
-   </provides>
- 
--  <content_rating type="oars-1.0">
--  </content_rating>
-+  <content_rating type="oars-1.0" />
- 
--  <summary>
--    Open source RGB lighting control that doesn't depend on manufacturer
--    software.
--  </summary>
-+  <summary>Open source RGB lighting control that doesn't depend on manufacturer software</summary>
- 
-   <description>
-     <p>
-@@ -63,7 +61,8 @@
- 
-   <screenshots>
-     <screenshot type="default">
--      <image>https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/uploads/e1d8d4603ecdd04f1acbcf6b2314fc66/OpenRGB_0.31_Device_View.PNG</image>
-+      <image>https://gitlab.com/CalcProgrammer1/OpenRGB/-/raw/master/Documentation/Images/OpenRGB_Screenshot.png</image>
-+      <caption>OpenRGB Device View</caption>
-     </screenshot>
-   </screenshots>
- 
-@@ -74,8 +73,8 @@
- 
-   <url type="bugtracker">https://gitlab.com/CalcProgrammer1/OpenRGB/-/issues</url>
-   <url type="contact">https://discord.gg/AQwjJPY</url>
--  <url type="donation">https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/home#support-openrgb</url>
--  <url type="faq">https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/Frequently-Asked-Questions</url>
--  <url type="help">https://gitlab.com/CalcProgrammer1/OpenRGB/-/wikis/home</url>
-+  <url type="donation">https://gitlab.com/CalcProgrammer1/OpenRGB/-/blob/master/README.md#support-openrgb</url>
-+  <url type="faq">https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/User-Documentation/Frequently-Asked-Questions.md</url>
-+  <url type="help">https://gitlab.com/OpenRGBDevelopers/OpenRGB-Wiki/-/blob/stable/home.md</url>
-   <url type="homepage">https://openrgb.org</url>
- </component>
+   <releases>
++    <release version="1.0rc2" date="2025-09-14"></release>
++    <release version="1.0rc1" date="2025-02-22"></release>
+     <release version="0.9" date="2023-06-09"></release>
+     <release version="0.8" date="2022-11-27"></release>
+     <release version="0.7" date="2021-12-30"></release>
