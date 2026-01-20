@@ -20,18 +20,12 @@ cleanup:
   - '*.la'
 
 modules:
-  - name: libhidapi
+  - name: libhidapi-hotplug
     buildsystem: cmake-ninja
     sources:
       - type: git
-        url: https://github.com/libusb/hidapi.git
-        tag: hidapi-0.15.0
-        commit: d6b2a974608dec3b76fb1e36c189f22b9cf3650c
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/libusb/hidapi/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
+        url: https://gitlab.com/OpenRGBDevelopers/hidapi-hotplug.git
+        commit: 00e88f6b23a45021a09ba258302dfc9d04fc6d04
 
   - name: mbedtls
     buildsystem: cmake-ninja
@@ -61,7 +55,4 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/CalcProgrammer1/OpenRGB
-        tag: release_candidate_1.0rc2
-        commit: 0fca93e4544f943d4d7ec8073dba4e47c18ef54b
-      - type: patch
-        path: patches/metainfo.patch
+        commit: 19f4c0eb2b2736f6d656affe9e437acfaf8ceb5f
