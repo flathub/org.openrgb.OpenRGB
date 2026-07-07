@@ -46,8 +46,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ARMmbed/mbedtls.git
-        tag: v3.6.6
-        commit: 0bebf8b8c7f07abe3571ded48a11aa907a1ffb20
+        tag: v3.6.7
+        commit: 068ff080b369adfac81509f9b57b2afabaf82dc5
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
