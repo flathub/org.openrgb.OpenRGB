@@ -1,7 +1,7 @@
 id: org.openrgb.OpenRGB
 sdk: org.kde.Sdk
 runtime: org.kde.Platform
-runtime-version: 5.15-25.08
+runtime-version: 6.11
 command: openrgb
 finish-args:
   - --device=all
@@ -20,18 +20,13 @@ cleanup:
   - '*.la'
 
 modules:
-  - name: libhidapi
+  - name: libhidapi-hotplug
     buildsystem: cmake-ninja
     sources:
       - type: git
-        url: https://github.com/libusb/hidapi.git
-        tag: hidapi-0.15.0
-        commit: d6b2a974608dec3b76fb1e36c189f22b9cf3650c
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/libusb/hidapi/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
+        url: https://gitlab.com/OpenRGBDevelopers/hidapi-hotplug.git
+        tag: hidapi-hotplug-0.15.0
+        commit: 238df449ecc0a56a70a3c8f4ebf46bb46857af27
 
   - name: mbedtls
     buildsystem: cmake-ninja
@@ -61,7 +56,4 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/CalcProgrammer1/OpenRGB
-        tag: release_candidate_1.0rc3
-        commit: 6fbcf62d7694e7b92fd0a5884b40b92984fbd1b0
-      - type: patch
-        path: patches/metainfo.patch
+        commit: da824ccfa81add10e7a1e9b1d739503ff898a3d8
