@@ -27,7 +27,7 @@ add-extensions:
     version: '5'
     directory: lib/openrgb/plugins
     add-ld-path: lib
-    subdirectories: false
+    subdirectories: true
     no-autodownload: false
     
 modules:
