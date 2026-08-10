@@ -19,6 +19,14 @@ cleanup:
   - '*.a'
   - '*.la'
 
+add-extensions:
+  org.openrgb.OpenRGB.Plugin:
+    version: '4'
+    directory: lib/openrgb/plugins
+    add-ld-path: lib
+    subdirectories: true
+    no-autodownload: false
+
 modules:
   - name: libhidapi
     buildsystem: cmake-ninja
@@ -65,3 +73,10 @@ modules:
         commit: 6fbcf62d7694e7b92fd0a5884b40b92984fbd1b0
       - type: patch
         path: patches/metainfo.patch
+      - type: patch
+        path: patches/recursive-plugin-load.patch
+
+  - name: create-mount-points
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/lib/openrgb/plugins
