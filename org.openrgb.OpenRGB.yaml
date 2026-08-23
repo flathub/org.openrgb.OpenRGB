@@ -69,10 +69,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/CalcProgrammer1/OpenRGB
-        tag: release_candidate_1.0rc3
-        commit: 6fbcf62d7694e7b92fd0a5884b40b92984fbd1b0
-      - type: patch
-        path: patches/metainfo.patch
+        tag: release_candidate_1.0rc3.1
+        commit: 5e81e26fcc65d3dacfb76b0a30ec0142ec7bb131
       - type: patch
         path: patches/recursive-plugin-load.patch
 
