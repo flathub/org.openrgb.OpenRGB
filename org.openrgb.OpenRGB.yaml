@@ -67,10 +67,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/CalcProgrammer1/OpenRGB
-        tag: release_1.0
-        commit: 81bbe18a84c2e507006f19dd252e397e40a56bfe
-      - type: patch
-        path: patches/mark_rc_releases_as_development.patch
+        tag: release_1.1
+        commit: 8e16de27858cf2be6af54a33ce003df74cb9fd3e
 
   - name: create-mount-points
     buildsystem: simple
